@@ -1,0 +1,79 @@
+START
+iPhone = True
+print Hello and Welcome to the Carphone Warehouse Troubleshooting Guide for iPhones and Android devices. Here, we will try and solve the issue with your device without the need to directly speaking to support.
+print YOU CAN ONLY RESPOND TO THE QUESTIONS WITH 'yes' OR 'no'
+response = userInput(Is your issue related to a cracked screen display?)
+while response not in 'yes', 'no':
+    print Please enter 'yes' or 'no' to this question. 
+    response = userInput(Is your issue related to a cracked screen display?)
+if response == yes:
+    response = userInput(Are you covered by a protect plan?)
+    if response == yes:
+        print Please contact your Protect Plan company as they will be able to sort this issue out for you
+    else:
+        print You can get a screen fixed from a mobile repair shop, but this may void its warranty. The best solution is to speak to the manufacturer of the device.
+else:
+    response = userInput(Has your device been dropped/in contact with liquid?)
+    while response not in 'yes', 'no':
+        print Please enter 'yes' or 'no' to this question. 
+        response = userInput(Has your device been dropped/in contact with liquid?)
+    if response == yes:
+        response = userInput(Are you covered by a protect plan?)
+        if response == yes:
+            print Please contact your Protect Plan company as they will be able to sort this issue out for you
+        else:
+            print A quick fix solution sometimes is to separate the phone’s battery and compartments and place them in a bag in rice for 24 hours, followed by removing the rice, placing them back in the phone and then turning the device back on. If this does not work then you will need to invest in a new phone. The manufacturer may give you a discount on a new phone, so you should speak to them.
+    else:
+        response = userInput(Is your device running out of storage space?)
+        while response not in 'yes', 'no':
+            print Please enter 'yes' or 'no' to this question. 
+            response = userInput(Is your device running out of storage space?)
+        if response == yes:
+            print Ideally, you should attempt to delete photos, videos, music and apps on your phone. Otherwise, you can use an app like CCleaner to free up some space on your device.
+        else:
+            response = userInput(Are you looking to delete your internet history?)
+            while response not in 'yes', 'no':
+                print Please enter 'yes' or 'no' to this question. 
+                response = userInput(Are you looking to delete your internet history?)
+            if response == yes:
+                print If you use Chrome, go to Menu > Settings > Clear Browsing Data/History. If you are using Safari, go to the Settings app > Safari > Clear History and Website Data. In future, it is recommended that you use the ‘Incognito’ or ‘Private Browsing’ feature on your device
+            else:
+                response = userInput(Is your device frozen?)
+                while response not in 'yes', 'no':
+                    print Please enter 'yes' or 'no' to this question. 
+                    response = userInput(Is your device frozen?)
+                if response == yes:
+                    if iPhone == True:
+                        print Soft Reset your device by holding down the Home Button and Power Button (ignore any messages such as ‘Slide to Power Off’) until your phone completely shuts down and you see the Apple Logo.
+                    else:
+                        print Try a Soft Reset by holding the Power + Volume Up button, however this can differ from phone to phone, so ask your Mobile Manufacturer for advice.
+                else:
+                    response = userInput(Are your apps crashing?)
+                    while response not in 'yes', 'no':
+                        print Please enter 'yes' or 'no' to this question. 
+                        response = userInput(Are your apps crashing?)
+                    if response == yes:
+                        if iPhone == True:
+                            print Remove the app from the multitasking tray (if applicable), and then re-open the app. If it still crashes, Soft Reset your device by holding down the Home Button and Power Button (ignore any messages such as ‘Slide to Power Off’) until your phone completely shuts down and you see the Apple Logo.
+                        else:
+                            print Try a Soft Reset by holding the Power + Volume Up button, however this can differ from phone to phone, so ask your Mobile Manufacturer for advice.
+                    else:
+                        if iPhone == True:
+                            response = userInput(Are you having network/bluetooth issues?)
+                            while response not in 'yes', 'no':
+                                print Please enter 'yes' or 'no' to this question. 
+                                response = userInput(Are you having network/bluetooth issues?)
+                            if response == yes:
+                                print you should reset your network settings by navigating to Settings > General > Reset > Reset Network Settings.
+                            else:
+                                print We cannot help you with any other queries, so we recommend speaking to your mobile manafacturer for further queries.
+                                break()
+                         else:
+                            response = userInput(Do you think you may have installed malware?)
+                            while response not in 'yes', 'no':
+                                print Please enter 'yes' or 'no' to this question. 
+                                response = userInput(Do you think you may have installed malware?)
+                            if response == yes:
+                                print The easiest way to get rid of/scan for malware is using an app such as Norton Antivirus or Lookout Security and Antivirus.
+                            else:
+                                print We cannot help you with any other queries, so we recommend speaking to your mobile manafacturer for further queries.
