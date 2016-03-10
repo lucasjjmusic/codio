@@ -1,5 +1,6 @@
-import sys
+import sys, os, errno
 __author__ = '12johnstonl'
+filename = "%USERPROFILE%\Documents\TechnicalCase" + caseno + ".txt"
 print('\033[0m' + "Hello and Welcome to the Carphone Warehouse Troubleshooting Guide!\nBefore we get started, I just want to ask you a few quick questions")
 print('\033[91m' + "IF YOU WOULD LIKE TO EXIT THE PROGRAM, ENTER 'Ctrl-C' AT ANY POINT." + '\033[0m')
 probs = ["a broken phone screen", "that your phone screen is not turning on", "that there is random colours on the phone's screen", "that bluetooth isn't working"]
@@ -60,7 +61,14 @@ def main():
                 ans = 3
                 break
             else:
-                print('\033[0m' + "Sorry, we didn't catch what you were saying. Maybe try simplifying it or changing your wording to include more keywords.\nIn addition, we currently only support screen and bluetooth issues. We are sorry for any inconvenience caused.\n\n")      
+                print('\033[0m' + "Sorry, we didn't catch what you were saying. Maybe try simplifying it or changing your wording to include more keywords.\nIn addition, we currently only support screen and bluetooth issues on this automated program.\n")
+                bans = input('\033[0m' + "If you have another issue unrelated to screen or bluetooth, please enter " + '\033[91m' + "'Y'" + '\033[0m' + " now. We are sorry for any inconvenience caused.\n\n" + '\033[94m').lower()
+                if bans == 'Y':
+                    extrainfo = input('\033[0m' + "Is there anything else you would like to let our technicians aware of?" + '\033[94m').lower()
+                    name = input('\033[0m' + "Can we take your Forename and Sirname (e.g. Nicholas Jones)" + '\033[94m').lower()
+                    email = input('\033[0m' + "And can we take your full email address? (e.g. nicholasj67@ntlworld.com)" + '\033[94m').lower()
+                    print("Thank you.")
+                    
 
         confirm = input('\033[0m' + "To confirm, your problem is " + probs[ans] + "\nPlease enter yes or no.\n" + '\033[94m').lower()
         if 'y' in confirm and apple == (1):
